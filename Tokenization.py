@@ -25,9 +25,6 @@ class Tokenization:
 
          return filteredTokens
 
-
-
-
     def get_p_index(docslist) :
         index = {}
 
@@ -64,7 +61,6 @@ class Tokenization:
             print('Term : {} not present in dictionary'.format(word))
         return ans
 
-
     def check(res,post):
         listt=list(res[1].keys())
         keys=list(post[1].keys())
@@ -90,7 +86,6 @@ class Tokenization:
 
         res=s
         return s
-
 
     def process_query(query,index):
         b = Tokenization
@@ -120,4 +115,3 @@ class Tokenization:
                        test= b.check(res, post)
                     res=test
         return list(res[1].keys())
-
