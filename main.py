@@ -1,17 +1,8 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from Tokenization import Tokenization
 from part3 import *
 
-
-
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print("                  positional index               ")
     docslist = ['1.txt', '2.txt', '3.txt', '4.txt', '5.txt', '6.txt', '7.txt', '8.txt', '9.txt', '10.txt']
@@ -60,13 +51,3 @@ if __name__ == '__main__':
         print("returned docs",sorted_s)
     else:
         print("try Another query")
-    """list1=[]
-    for i in result:
-        list[i]=np.dot(df1.loc[:, i].values, tfList)
-    print(list1)
-    m=vectorizer(query)
-    x=get_similarity(m[0],m[1])
-    for i in x:
-        print(i)
-        """
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
