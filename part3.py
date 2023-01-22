@@ -97,31 +97,7 @@ def get_normalized_tfidf():
     for column in tfidf.columns:
         normalized_a[column] = tfidf[column].apply(lambda x: normalized_tfidf(column, x))
     return normalized_a.sort_index(ascending=True)
-"""def vectorizer(query):
-    dox=[]
-    q=[query]
-    vectoer = TfidfVectorizer()
-    for doc in docslist:
-        f = open(doc)
-        dox.append(f.read())
-        f.close()
-    x = vectoer.fit_transform(dox)
-    x = x.T.toarray()
-    df = pd.DataFrame(x, index=vectoer.get_feature_names_out())
-    q_vector = vectoer.transform(q).toarray().reshape(df.shape[0])
-    return q_vector,df
 
-def get_similarity(list1,list2):
-    similarity={}
-    cosine_similarity=[]
-    for i in range(10):
-        similarity[i] = np.dot(list2.loc[:,i].values, list1)/ np.linalg.norm(list2.loc[:,i])*np.linalg.norm(list1)
-    s_sorted= sorted(similarity.items(), key=lambda x:x[1])
-    for document,score in s_sorted:
-        if score> 0.5:
-            cosine_similarity.append('cosine similarity(q,doc'+str(document)+') ='+str(score))
-
-    return cosine_similarity"""
 def get_result(query,list1):
     b=Tokenization
     idfList=get_inverse_document_freq()
